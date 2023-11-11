@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>CommonGen</title>
+  <link rel="icon" type="image/x-icon" href="static/images/bear.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,20 +52,24 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">CommonsenseT2I: Text-to-Image Generation that Requires Commonsense Reasoning:      An Adversarial Challenge</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://www.linkedin.com/in/muyu-he/?locale=en_US" target="_blank" style="color:#B082C9"><font color="#B082C9"><b>Muyu He</b></font></a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://zeyofu.github.io/" target="_blank"><font color="#B082C9"><b>Xingyu Fu</b></font></a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://yujielu10.github.io/" target="_blank"><font color="5D9AAB"><b>Yujie Lu</b></font></a>,</span>
+                    <span class="author-block">
+                      <a href="https://sites.cs.ucsb.edu/~william/" target="_blank"><font color="#5D9AAB"><b>William Yang Wang</b></font></a>,</span>
+                      <span class="author-block">
+                        <a href="https://www.cis.upenn.edu/~danroth/" target="_blank"><font color="#B082C9"><b>Dan Roth</b></font></a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block"><font color="#B082C9">&#x25BA;</font>University of Pensylvania&emsp;<font color="#5D9AAB">&#x25BA;</font>University of California, Santa Barbara</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -84,12 +88,12 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="https://huggingface.co/datasets/RiddleHe/commonsense-baseline" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
-                      <span>Supplementary</span>
+                      <span>Dataset</span>
                     </a>
                   </span>
 
@@ -106,12 +110,12 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://riddlehe.github.io/commonsense/" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Visualization</span>
                 </a>
               </span>
             </div>
@@ -148,7 +152,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            We present a novel task and benchmark for evaluating the ability of text-based image generation models to conduct visio-linguistic commonsense reasoning, which we call <b><i>CommonsenseT2I</b></i>. 
+            <ul>
+              <li>Given <b>two adversarial text prompts</b> for image generation--both contain <B>an identical set of action words with minor differences</B>, such as ``bear eating salmon v.s. human eating salmon", we focus on evaluating whether image generation models can output images that fit commonsense knowledge, ``bear eat raw whole salmon with hand v.s. human eat cooked salmon fillet with forks". 
+              </li>We provide <b>pairwise expected output descriptions</b> for evaluation purpose, along with an automatic evaluation pipeline to check whether the the generated images match the expected commonsense reasoning result. 
+            </ul>
+            The benchmark dataset is carefully hand-curated by expert annotators and is labeled with a rich set of fine-grained tags, such as category of commonsense and degree of objectivity, to assist in analyzing model performance. We probe a range of state-of-the-art text-conditioned image generation models and find that, surprisingly, none of them do much better than chance. We aim for <b><i>CommonsenseT2I</b></i> to serve as a useful evaluation benchmark for advancing the state of the art and driving further progress in the field.
           </p>
         </div>
       </div>
