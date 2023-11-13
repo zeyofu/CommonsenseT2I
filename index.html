@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta name="description" content="Project page for paper: CommonsenseT2I: Text-to-Image Generation that Requires Commonsense Reasoning: An Adversarial Challenge">
+  <meta property="og:title" content="CommonsenseT2I: Commonsense Text-To-Image Generation"/>
+  <meta property="og:description" content="Multimodal, Image Generation, Commonsense"/>
+  <meta property="og:url" content="https://zeyofu.github.io/CommonsenseT2I/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
@@ -52,11 +52,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">CommonsenseT2I: Text-to-Image Generation that Requires Commonsense Reasoning:      An Adversarial Challenge</h1>
+            <h1 class="title is-2 publication-title">CommonsenseT2I: Text-to-Image Generation that Requires Commonsense Reasoning:<br> An Adversarial Challenge</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://www.linkedin.com/in/muyu-he/?locale=en_US" target="_blank" style="color:#B082C9"><font color="#B082C9"><b>Muyu He</b></font></a><sup>*</sup>,</span>
+                <a href="https://riddlehe.github.io/" target="_blank" style="color:#B082C9"><font color="#B082C9"><b>Muyu He</b></font></a><sup>*</sup>,</span>
                 <span class="author-block">
                   <a href="https://zeyofu.github.io/" target="_blank"><font color="#B082C9"><b>Xingyu Fu</b></font></a><sup>*</sup>,</span>
                   <span class="author-block">
@@ -80,7 +80,7 @@
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
+                          <i class="ai ai-arxiv"></i>
                         </span>
                         <span>Paper</span>
                       </a>
@@ -91,7 +91,7 @@
                       <a href="https://huggingface.co/datasets/RiddleHe/commonsense-baseline" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
+                        <i class="fa fa-database"></i>
                       </span>
                       <span>Dataset</span>
                     </a>
@@ -113,9 +113,9 @@
                   <a href="https://riddlehe.github.io/commonsense/" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <i class="fa fa-images"></i>
                   </span>
-                  <span>Visualization</span>
+                  <span>Visualization on Stable Diffusion 2.1</span>
                 </a>
               </span>
             </div>
@@ -131,13 +131,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+
+      <img src="files/example.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle">
+        A failed case of Stable Diffusion v2.1 generated images on an example from CommonsenseT2I. 
+        The two text prompts contain the same action words but with different subjects. 
+        The task of commonsense understanding what the salmon should look like in the image is trivial for human but much harder for T2I models.
       </h2>
     </div>
   </div>
@@ -150,14 +149,33 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" font size="4">
           <p>
-            We present a novel task and benchmark for evaluating the ability of text-based image generation models to conduct visio-linguistic commonsense reasoning, which we call <b><i>CommonsenseT2I</b></i>. 
+            We present a novel task and benchmark for evaluating the ability of text--to-image(T2I) generation models to conduct visual-commonsense reasoning, which we call <b><i>CommonsenseT2I</b></i>. 
             <ul>
-              <li>Given <b>two adversarial text prompts</b> for image generation--both contain <B>an identical set of action words with minor differences</B>, such as ``bear eating salmon v.s. human eating salmon", we focus on evaluating whether image generation models can output images that fit commonsense knowledge, ``bear eat raw whole salmon with hand v.s. human eat cooked salmon fillet with forks". 
-              </li>We provide <b>pairwise expected output descriptions</b> for evaluation purpose, along with an automatic evaluation pipeline to check whether the the generated images match the expected commonsense reasoning result. 
+              <li>
+                Given <b>two adversarial text prompts</b> for image generation--both contain <B>an identical set of action words with minor differences</B>, 
+                we focus on evaluating whether image generation models can output images that fit commonsense knowledge.
+                <ul>
+                  <li>E.g. prompt1: <font color="#586B71"><i>A bear eating salmon.</i></font> v.s. prompt2: <font color="#586B71"><i>A person eating salmon.</i></font></li>
+                </ul>
+              </li>
+              <li>We provide <b>pairwise expected output descriptions</b> for evaluation purpose, along with an automatic evaluation pipeline to check whether the the generated images match the expected commonsense reasoning result. 
+                <ul>
+                  <li>E.g. description1: <font color="#586B71"><i>Raw whole salmon fish.</i></font> v.s. description2: <font color="#586B71"><i>Cooked salmon fillet.</i></font></li>
+                </ul>
+              </li>
+              <li>
+                We propose an automatic evaluation metric that is specifically designed for the task. 
+                Experiments validate that the proposed evaluation metrics are highly correlated with human perception.
+              </li>
+              <li>
+                We benchmark a range of state-of-the-art text-conditioned image generation models and find that, there is still a large gap between model performance and what humans can do. 
+              </li>
             </ul>
-            The benchmark dataset is carefully hand-curated by expert annotators and is labeled with a rich set of fine-grained tags, such as category of commonsense and degree of objectivity, to assist in analyzing model performance. We probe a range of state-of-the-art text-conditioned image generation models and find that, surprisingly, none of them do much better than chance. We aim for <b><i>CommonsenseT2I</b></i> to serve as a useful evaluation benchmark for advancing the state of the art and driving further progress in the field.
+            The benchmark dataset is carefully hand-curated by expert annotators and is labeled with a rich set of fine-grained tags, 
+            such as category of commonsense and degree of objectivity, to assist in analyzing model performance. 
+            We aim for <b><i>CommonsenseT2I</b></i> to serve as a useful evaluation benchmark, fostering advancements in state-of-the-art technologies and driving further progress in the field.
           </p>
         </div>
       </div>
@@ -174,30 +192,30 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="files/show1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Paired adversarial text prompts and correspondingly expected output descriptions.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="files/show2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Paired adversarial text prompts and correspondingly expected output descriptions.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="files/show3.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+          Paired adversarial text prompts and correspondingly expected output descriptions.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+        <img src="files/show4.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        Paired adversarial text prompts and correspondingly expected output descriptions.
       </h2>
     </div>
   </div>
@@ -209,17 +227,16 @@
 
 
 
-<!-- Youtube video -->
+<!-- 
+  Youtube video 
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
@@ -227,60 +244,9 @@
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+End youtube video 
+-->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 <!--BibTex citation -->
@@ -296,13 +262,13 @@
   <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
-      <div class="column is-8">
+      <div class="column is-9">
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>. <br> 
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer.
           </p>
 
         </div>
