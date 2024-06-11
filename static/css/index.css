@@ -134,4 +134,8 @@ body {
 }
 
 
+mark {
+  background-color: cornsilk;
+  color: black;
+}
 
